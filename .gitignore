@@ -37,3 +37,6 @@ next-env.d.ts
 
 # IDE Settings
 settings.json
+
+# env
+.env
