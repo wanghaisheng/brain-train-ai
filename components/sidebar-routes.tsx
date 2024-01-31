@@ -1,6 +1,6 @@
 import React from 'react'
 import SideBarItem from './sidebar-item'
-import { PenTool, LayoutDashboard, HeartPulse } from "lucide-react";
+import { PenTool, LayoutDashboard, HeartPulse, Settings } from "lucide-react";
 
 const routes = [
   {
@@ -18,6 +18,12 @@ const routes = [
     href: "/meditation",
     icon: HeartPulse,
   },
+  {
+    name: "Settings",
+    href: "/settings",
+    icon: Settings,
+  },
+
 ];
 
 export default function SidebarRoutes() {
