@@ -41,7 +41,7 @@ export default function DashboardPage() {
         <h2 className="text-2xl md:text-4xl font-bold text-center">
           Dashboard
         </h2>
-        <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
+        <p className="text-muted-foreground font-light text-sm md:text-lg text-center max-w-[50rem] mx-auto">
           Welcome to ZenMelody, where every note is a step towards inner peace
           and enhanced concentration. In a world bustling with noise and
           distractions, ZenMelody offers a sanctuary of sound, specially crafted
