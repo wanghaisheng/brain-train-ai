@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 import React from "react";
 import {
-  PenTool,
+  Music,
   HeartPulse,
 } from "lucide-react";
 import Link from "next/link";
@@ -15,9 +15,9 @@ import { Card } from "@/components/ui/card";
 
 export const tools = [
   {
-    label: "Generate Study Music",
-    icon: PenTool,
-    href: "/studymusic",
+    label: "Generate Zen Music",
+    icon: Music,
+    href: "/zen-melody",
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
     imageUrl: "/study.jpg",
