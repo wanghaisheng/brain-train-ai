@@ -85,3 +85,7 @@ body,
 .cyan_gradient {
   @apply bg-gradient-to-r from-cyan-300 to-violet-500 bg-clip-text text-transparent;
 }
+
+.btn_primary {
+  @apply inline-flex h-10 items-center justify-center gap-2 rounded-md bg-cyan-400 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-cyan-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-400/90 dark:focus-visible:ring-zinc-300
+}
