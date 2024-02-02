@@ -1,6 +1,6 @@
 "use client";
 
-import { AudioLines } from "lucide-react";
+import { AudioLines, Quote } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +20,14 @@ export const tools = [
     href: "/zen-melody",
     color: "text-emerald-500",
     bgColor: "bg-emerald-500/10",
+    imageUrl: "/zen-music.jpg",
+  },
+  {
+    label: "Zen Quotes",
+    icon: Quote,
+    href: "/zen-quotes",
+    color: "text-indigo-500",
+    bgColor: "bg-indigo-500/10",
     imageUrl: "/study.jpg",
   },
   {
