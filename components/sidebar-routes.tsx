@@ -19,7 +19,7 @@ const routes = [
     icon: Music,
   },
   {
-    name: "Meditation",
+    name: "Meditation Video",
     href: "/meditation",
     icon: HeartPulse,
   },

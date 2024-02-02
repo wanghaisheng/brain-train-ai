@@ -31,7 +31,7 @@ export const tools = [
     imageUrl: "/study.jpg",
   },
   {
-    label: "Generate Meditation Music",
+    label: "Meditation Video",
     icon: HeartPulse,
     href: "/meditation",
     color: "text-pink-700",
