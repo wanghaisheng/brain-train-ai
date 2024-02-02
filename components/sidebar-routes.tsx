@@ -9,8 +9,13 @@ const routes = [
     icon: LayoutDashboard,
   },
   {
-    name: "Zen Music",
+    name: "Zen Music AI",
     href: "/zen-melody",
+    icon: Music,
+  },
+  {
+    name: "Zen Quotes",
+    href: "/zen-quotes",
     icon: Music,
   },
   {
