@@ -81,3 +81,7 @@ body,
     @apply bg-background text-foreground;
   }
 }
+
+.cyan_gradient {
+  @apply bg-gradient-to-r from-cyan-300 to-violet-500 bg-clip-text text-transparent;
+}
