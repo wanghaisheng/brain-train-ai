@@ -48,17 +48,18 @@ export default function DashboardPage() {
         </div>
 
         <div className="mx-8 space-y-4 px-4 lg:px-8 bg-indigo-50 mb-6 py-4 border rounded-xl">
-        <h3 className="text-2xl font-bold text-indigo-400">Welcome to ZenMelody</h3>
-        <p className="text-muted-foreground ">
-       every note is a step towards inner peace
-          and enhanced concentration. In a world bustling with noise and
-          distractions, ZenMelody offers a sanctuary of sound, specially crafted
-          to foster relaxation, focus, and mental clarity. Whether you're a
-          student seeking a study aid or a meditation enthusiast looking for
-          tranquility, ZenMelody is your go-to source for auditory bliss.
-        </p>
-      </div>
-
+          <h3 className="text-2xl font-bold text-indigo-400">
+            Welcome to ZenMelody
+          </h3>
+          <p className="text-muted-foreground ">
+            ZenMelody is more than just an app; it's a companion for anyone
+            looking to enrich their meditation practice and discover inner
+            peace. With AI-generated music, inspirational Zen quotes, and a
+            diverse range of meditation videos, ZenMelody is your all-in-one
+            platform for achieving tranquility and mindfulness. Embrace the
+            journey towards a more peaceful and centered life with ZenMelody
+          </p>
+        </div>
       </div>
       <div className="px-4 space-y-6 max-w-[600px] mx-auto">
         {tools.map((tool, index) => (
