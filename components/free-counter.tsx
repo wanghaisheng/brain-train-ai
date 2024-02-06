@@ -11,8 +11,10 @@ import { useProModal } from "@/hooks/pro-modal";
 
 export default function FreeCounter({
   apiLimitCount,
+  isPro= false
 }: {
   apiLimitCount: number;
+  isPro?: boolean;
 }) {
   const [mounted, setMounted] = React.useState(false);
   const proModal = useProModal();
@@ -20,6 +22,10 @@ export default function FreeCounter({
     setMounted(true);
   }, []);
   if (!mounted) return null;
+
+  if (isPro) {
+    return null;
+  }
 
   return (
     <div>

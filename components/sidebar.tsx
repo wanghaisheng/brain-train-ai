@@ -6,7 +6,13 @@ import SidebarRoutes from "./sidebar-routes";
 import { AudioLines, LayoutDashboard } from "lucide-react";
 import FreeCounter from "./free-counter";
 
-export default function Sidebar({ apiLimitCount }: { apiLimitCount: number }) {
+export default function Sidebar({
+  apiLimitCount,
+  isPro,
+}: {
+  apiLimitCount: number;
+  isPro?: boolean;
+}) {
   return (
     <div className="flex flex-col h-full border-r bg-white shadow-sm">
       <div className="flex flex-col space-y-2 py-2 flex-grow">
@@ -20,7 +26,7 @@ export default function Sidebar({ apiLimitCount }: { apiLimitCount: number }) {
         </div>
         <SidebarRoutes />
       </div>
-      <FreeCounter apiLimitCount={apiLimitCount} />
+      <FreeCounter apiLimitCount={apiLimitCount} isPro={isPro} />
     </div>
   );
 }
