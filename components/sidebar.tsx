@@ -6,11 +6,7 @@ import SidebarRoutes from "./sidebar-routes";
 import { AudioLines, LayoutDashboard } from "lucide-react";
 import FreeCounter from "./free-counter";
 
-interface SidebarProps {
-  apiLimitCount?: number;
-}
-
-export default function Sidebar({ apiLimitCount = 0 }: SidebarProps) {
+export default function Sidebar({ apiLimitCount }: { apiLimitCount: number }) {
   return (
     <div className="flex flex-col h-full border-r bg-white shadow-sm pt-3">
       <div className="flex flex-col space-y-4 py-4 flex-grow">
