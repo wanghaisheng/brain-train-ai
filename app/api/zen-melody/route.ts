@@ -1,6 +1,9 @@
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import Replicate from "replicate";
+import { checkSubscription } from "@/lib/subscription";
+
+import { incrementApiLimit, checkApiLimit } from "@/lib/api-limits";
 
 const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN,
@@ -20,6 +23,13 @@ export async function POST(req: Request) {
       return new Response("Prompt is required", { status: 400 });
     }
 
+    const freeTrial = await checkApiLimit();
+    const isPro = await checkSubscription();
+
+    if (!freeTrial && !isPro) {
+      return new NextResponse("Free trial limit reached", { status: 403 });
+    }
+
     const response = await replicate.run(
       "meta/musicgen:b05b1dff1d8c6dc63d14b0cdb42135378dcb87f6373b0d3d341ede46e59e2b38",
       {
@@ -29,6 +39,11 @@ export async function POST(req: Request) {
         },
       }
     );
+
+    if (!isPro) {
+      await incrementApiLimit();
+    }
+
     return NextResponse.json(response);
   } catch (error) {
     console.error(error);
