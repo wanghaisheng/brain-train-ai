@@ -33,7 +33,7 @@ export default function SideBarItem({
     <button
       onClick={onClick}
       className={cn(
-        "flex items-center justify-start px-4 py-4 text-sm font-bold text-slate-500 rounded-lg mx-3",
+        "flex items-center justify-start px-4 py-3 text-sm font-bold text-slate-500 rounded-lg mx-3",
         isActive
           ? "bg-cyan-50 text-cyan-500"
           : "text-slate-500 hover:bg-cyan-50 hover:text-cyan-500"
