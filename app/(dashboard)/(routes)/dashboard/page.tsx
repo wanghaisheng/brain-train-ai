@@ -43,7 +43,7 @@ export default function DashboardPage() {
   return (
     <div>
       <div className="mb-8 space-y-4">
-        <div className="cyan_gradient text-center min-w-[200px] px-4 lg:px-8">
+        <div className="cyan_gradient min-w-[200px] px-4 lg:px-8">
           <h1 className="text-4xl font-bold mb-5">Dashboard</h1>
         </div>
 
