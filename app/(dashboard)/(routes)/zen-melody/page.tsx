@@ -39,7 +39,7 @@ export default function ZenMelody() {
     } catch (error) {
       toast.error("An error occurred. Please try again later.");
     } finally {
-      router.refresh();
+      router.refresh(); // all components will be re-rendered
     }
   };
 
