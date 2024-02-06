@@ -18,9 +18,9 @@ export async function GET() {
 
     const userSubscription = await prismadb.userSubscription.findUnique({
       where: {
-        userId,
-      },
-    });
+        userId
+      }
+    })
 
     // If the user has a subscription, we can create a billing portal session and return the URL
     if (userSubscription && userSubscription.stripeCustomerId) {
