@@ -14,9 +14,11 @@ import Loader from "@/components/loader";
 import Empty from "@/components/empty";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { useProModal } from "@/hooks/pro-modal";
 
 export default function ZenMelody() {
   const router = useRouter();
+  const proModal = useProModal();
   const [music, setMusic] = React.useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -36,7 +38,11 @@ export default function ZenMelody() {
 
       setMusic(response.data);
       form.reset();
-    } catch (error) {
+    } catch (error: any) {
+      if (error?.response?.status === 403) {
+        proModal.open();
+        return;
+      }
       toast.error("An error occurred. Please try again later.");
     } finally {
       router.refresh(); // all components will be re-rendered
