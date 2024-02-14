@@ -5,6 +5,7 @@ import { LucideIcon } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { ProServices } from "@/lib/constants";
 
 interface SidebarItemProps {
   path: string;
@@ -48,7 +49,7 @@ export default function SideBarItem({
           {name}
         </div>
 
-        {["Zen Music AI"].includes(name) && (
+        {ProServices.includes(name) && (
             <Badge variant="accent" className="ml-2">
                 Pro
             </Badge>
