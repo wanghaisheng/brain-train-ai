@@ -19,7 +19,7 @@ export default function LandingNavbar() {
   const { isSignedIn } = useAuth();
   return (
     <nav className="p-4 bg-transparent flex items-center justify-between">
-      <Link href="/" className="flex items-center pl-3 mb-4">
+      <Link href="/" className="flex items-center pl-3 mb-2">
         <div className="flex items-center mr-2">
           <AudioLines className="h-10 w-10 text-cyan-400" />
         </div>
