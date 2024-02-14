@@ -9,33 +9,7 @@ import { Music, HeartPulse } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-
-export const tools = [
-  {
-    label: "Generate Zen Music",
-    icon: Music,
-    href: "/zen-melody",
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
-    imageUrl: "/zen-music.jpg",
-  },
-  {
-    label: "Zen Quotes",
-    icon: Quote,
-    href: "/zen-quotes",
-    color: "text-indigo-500",
-    bgColor: "bg-indigo-500/10",
-    imageUrl: "/study.jpg",
-  },
-  {
-    label: "Meditation Video",
-    icon: HeartPulse,
-    href: "/meditation",
-    color: "text-pink-700",
-    bgColor: "bg-pink-700/10",
-    imageUrl: "/meditation.jpg",
-  },
-];
+import { ZenMelodyTools } from "@/lib/constants";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -62,7 +36,7 @@ export default function DashboardPage() {
         </div>
       </div>
       <div className="px-4 space-y-6 max-w-[600px] mx-auto">
-        {tools.map((tool, index) => (
+        {ZenMelodyTools.map((tool, index) => (
           <Card
             onClick={() => router.push(tool.href)}
             key={tool.href}
