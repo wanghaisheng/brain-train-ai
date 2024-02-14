@@ -28,7 +28,7 @@ export default function DashboardPage() {
           <p className="text-muted-foreground ">
             ZenMelody is more than just an app; it's a companion for anyone
             looking to enrich their meditation practice and discover inner
-            peace. With AI-generated music, inspirational Zen quotes, and a
+            peace. With AI-generated guide, AI-generated music, inspirational Zen quotes, and a
             diverse range of meditation videos, ZenMelody is your all-in-one
             platform for achieving tranquility and mindfulness. Embrace the
             journey towards a more peaceful and centered life with ZenMelody
