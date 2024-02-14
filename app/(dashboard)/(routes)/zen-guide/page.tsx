@@ -39,11 +39,8 @@ export default function ZenGuide() {
   const onsubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setGuide(null);
-
-      const response = await axios.post("/api/zen-melody", values);
-      console.log(response);
-
-      setGuide(response.data);
+      const response = await axios.post("/api/zen-guide", values);
+      setGuide(response.data.choices[0].message.content);
       form.reset();
     } catch (error: any) {
       if (error?.response?.status === 403) {
@@ -54,6 +51,15 @@ export default function ZenGuide() {
     } finally {
       router.refresh();
     }
+  };
+
+  const formatGuideText = (text: string) => {
+    return text.split('\n').map((line, index, array) => (
+      <React.Fragment key={index}>
+        {line}
+        {index !== array.length - 1 && <br />} {/* Add a <br> element except after the last line */}
+      </React.Fragment>
+    ));
   };
 
   return (
@@ -107,16 +113,16 @@ export default function ZenGuide() {
             <Loader />
           </div>
         )}
-        {!sampleText && !isLoading && (
+        {!guide && !isLoading && (
           <Empty imageUrl="/mindfulness.svg" label="No guide generated." />
         )}
-        {sampleText && (
+        {guide && (
           <blockquote className="p-4 mt-6 italic border-l-4 bg-neutral-100 text-neutral-600 border-indigo-400 quote">
             <div className="inline-block mb-2 p-2 rounded-full bg-indigo-400">
               {" "}
               <Bot className="text-white" size={32} />{" "}
             </div>
-            <p className="mb-2 ml-2">{sampleText}</p>
+            <p className="mb-2 ml-2">{formatGuideText(guide)}</p>
           </blockquote>
         )}
       </div>
