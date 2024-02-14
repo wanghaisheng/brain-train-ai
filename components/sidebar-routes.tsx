@@ -1,6 +1,6 @@
 import React from 'react'
 import SideBarItem from './sidebar-item'
-import { Music, LayoutDashboard, HeartPulse, Settings } from "lucide-react";
+import { Music, LayoutDashboard, HeartPulse, Quote, Settings } from "lucide-react";
 
 const routes = [
   {
@@ -16,7 +16,7 @@ const routes = [
   {
     name: "Zen Quotes",
     href: "/zen-quotes",
-    icon: Music,
+    icon: Quote,
   },
   {
     name: "Meditation Video",
