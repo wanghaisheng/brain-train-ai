@@ -20,7 +20,7 @@ export default async function SettingsPage() {
       >
         <p className="font-bold">Coming Soon!</p>
         <p>
-          The Pro version is currently under development. Stay tuned for
+          The Pro version is currently under testing. Stay tuned for
           updates!
         </p>
       </div>
