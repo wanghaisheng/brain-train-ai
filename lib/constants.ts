@@ -1,5 +1,7 @@
 import { Music, LayoutDashboard, Bot, HeartPulse, Quote, Settings } from "lucide-react";
 
+export const MAX_FREE_COUNTS = 3
+
 export const NavRoutes = [
   {
     name: "Dashboard",
@@ -33,40 +35,35 @@ export const NavRoutes = [
   },
 ];
 
-export const ZenMelodyTools = [
+export const ZenMelodyFeatures = [
   {
-    label: "Zen Guide AI",
-    icon: Bot,
-    href: "/zen-guide",
-    color: "text-cyan-500",
-    bgColor: "bg-cyan-500/10",
-    imageUrl: "/guide.jpg",
+    title: "Zen Guide AI",
+    description:
+      "AI-generated meditation guide that helps you find peace and tranquility.",
+    imageUrl: "/zen-guide-web.png",
+    alt: "Zen Guide AI",
   },
   {
-    label: "Zen Music AI",
-    icon: Music,
-    href: "/zen-melody",
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
-    imageUrl: "/zen-music.jpg",
+    title: "Zen Music AI",
+    description:
+      "Discover unique, soothing soundscapes tailored to your mood and meditation needs.",
+    imageUrl: "/zen-music-web.png",
+    alt: "Zen Music AI",
   },
   {
-    label: "Zen Quotes",
-    icon: Quote,
-    href: "/zen-quotes",
-    color: "text-indigo-500",
-    bgColor: "bg-indigo-500/10",
-    imageUrl: "/study.jpg",
+    title: "Zen Quotes",
+    description:
+      "Get inspired with Zen quotes that help you find inner peace and tranquility.",
+    imageUrl: "/zen-quotes-web.png",
+    alt: "Zen Quotes",
   },
   {
-    label: "Meditation Video",
-    icon: HeartPulse,
-    href: "/meditation",
-    color: "text-pink-700",
-    bgColor: "bg-pink-700/10",
-    imageUrl: "/meditation.jpg",
+    title: "Meditation Video",
+    description:
+      "Discover a diverse range of meditation videos to help you find inner peace.",
+    imageUrl: "/zen-video-web.png",
+    alt: "Meditation Video",
   },
 ];
-
 
 export const ProServices = [ "Zen Music AI", "Zen Guide AI" ];
