@@ -6,20 +6,22 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import TypewriterComponent from "typewriter-effect";
 import Image from "next/image";
+import SingleFeature from "@/components/single-feature";
+import { ZenMelodyFeatures } from "@/lib/constants";
 
 export default function LandingHero() {
   const { isSignedIn } = useAuth();
 
   return (
     <div
-      className="bg-cover bg-center text-slate-700 py-20 px-4"
+      className="bg-cover bg-center text-slate-700 py-12 px-4"
       style={{ backgroundImage: "url('/path-to-your-background-image.jpg')" }}
     >
-      <h1 className="text-4xl font-bold text-center">
+      <h1 className="mt-14 text-3xl font-extrabold tracking-tight text-center text-zync-600 sm:text-4xl md:text-5xl">
         Embrace Your Inner Peace with ZenMelody
       </h1>
       <div className="text-center mt-2">
-        <div className="text-transparent text-3xl font-bold text-center bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 inline-block">
+        <div className="text-transparent text-4xl font-bold text-center bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400 inline-block">
           <TypewriterComponent
             options={{
               strings: [
@@ -35,11 +37,14 @@ export default function LandingHero() {
         </div>
       </div>
 
-      <p className="mt-6 text-xl text-center">
+      <p className="mt-6 text-lg text-center text-slate-500 font">
         Your Personal AI-Powered Meditation Companion
       </p>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+      <h1 className="mt-8 text-2xl font-bold tracking-tighter text-center sm:text-3xl md:text-4xl">
+        Our Features
+      </h1>
+      <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Card 1 */}
         <div className="flex flex-col justify-between bg-white text-gray-800 rounded-lg shadow-2xl p-6 h-full">
           <div>
@@ -114,14 +119,29 @@ export default function LandingHero() {
           No credit card required.
         </div>
       </div>
+      
+      {ZenMelodyFeatures.map((feature, index) => (
+        <SingleFeature
+          key={index}
+          title={feature.title}
+          description={feature.description}
+          imageUrl={feature.imageUrl}
+          alt={feature.alt}
+        />
+      ))}
 
-      {/* <div className="mt-8 mx-auto max-w-4xl">
-        <div className="bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg rounded-xl shadow-2xl p-6 text-gray-800">
-          <p className="text-md md:text-lg leading-relaxed">
-            ZenMelody offers a sanctuary where technology meets tranquility. Powered by AI, we create a personalized meditation experience that adapts to your life's rhythm. Whether you're seeking solace in sound, wisdom in words, or guidance in practice, ZenMelody is here to support your journey towards mindfulness and inner peace. Dive into a seamless blend of AI-generated music, daily zen quotes, and immersive meditation video clips designed to elevate your meditation practice and enrich your daily routine. Let ZenMelody be your guide to a more mindful, serene, and balanced life.
-          </p>
+      <div className="mt-14 text-center">
+        <div>
+          <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+            <Button className="rounded-full text-white bg-gradient-to-r from-indigo-400 to-pink-500 hover:bg-indigo-500 hover:scale-110 px-4 py-2 font-bold transition-transform duration-150 ease-in-out">
+              Get Started For Free
+            </Button>
+          </Link>
         </div>
-      </div> */}
+        <div className="text-zinc-400 text-xs md:text-sm font-normal mt-4">
+          No credit card required.
+        </div>
+      </div>
     </div>
   );
 }

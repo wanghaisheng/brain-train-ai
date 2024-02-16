@@ -1,15 +1,47 @@
 "use client";
 
-import { AudioLines, Quote } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-
+import { Music, Bot, HeartPulse, Quote, AudioLines } from "lucide-react";
 import React from "react";
-import { Music, HeartPulse } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
-import { ZenMelodyTools } from "@/lib/constants";
+
+const ZenMelodyTools = [
+  {
+    label: "Zen Guide AI",
+    icon: Bot,
+    href: "/zen-guide",
+    color: "text-cyan-500",
+    bgColor: "bg-cyan-500/10",
+    imageUrl: "/guide.jpg",
+  },
+  {
+    label: "Zen Music AI",
+    icon: Music,
+    href: "/zen-melody",
+    color: "text-emerald-500",
+    bgColor: "bg-emerald-500/10",
+    imageUrl: "/zen-music.jpg",
+  },
+  {
+    label: "Zen Quotes",
+    icon: Quote,
+    href: "/zen-quotes",
+    color: "text-indigo-500",
+    bgColor: "bg-indigo-500/10",
+    imageUrl: "/study.jpg",
+  },
+  {
+    label: "Meditation Video",
+    icon: HeartPulse,
+    href: "/meditation",
+    color: "text-pink-700",
+    bgColor: "bg-pink-700/10",
+    imageUrl: "/meditation.jpg",
+  },
+];
+
 
 export default function DashboardPage() {
   const router = useRouter();
