@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "@/components/footer";
 
 export default function LandingLayout({
   children,
@@ -6,12 +7,14 @@ export default function LandingLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="h-full overflow-auto">
-      <div className="main">
-        {/* Ensure gradient is positioned absolutely within the relative main container */}
-        <div className="gradient absolute inset-0 pointer-events-none" />
+    <main className="flex flex-col min-h-screen overflow-auto">
+      <div className="flex-grow">
+        <div className="main">
+          <div className="gradient absolute inset-0 pointer-events-none" />
+        </div>
+        <div className="mx-auto max-w-screen-xl flex-grow">{children}</div>
       </div>
-      <div className="mx-auto max-w-screen-xl h-full">{children}</div>
+      <Footer />
     </main>
   );
 }
