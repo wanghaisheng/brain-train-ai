@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
  
+html,
+body,
+:root {
+  height: 100%;
+}
+
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  background-image: radial-gradient(
+      at 27% 37%,
+      hsla(215, 98%, 61%, 1) 0px,
+      transparent 0%
+    ),
+    radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%),
+    radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 80px;
+  opacity: 0.15;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -73,4 +104,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.cyan_gradient {
+  @apply bg-gradient-to-r from-cyan-300 to-violet-500 bg-clip-text text-transparent;
+}
+
+.btn_primary {
+  @apply inline-flex h-10 items-center justify-center gap-2 rounded-md bg-cyan-400 px-6 text-sm font-medium text-zinc-50 shadow transition-colors hover:bg-cyan-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-400/90 dark:focus-visible:ring-zinc-300
 }

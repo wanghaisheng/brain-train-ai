@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# local
+/local
+
 # next.js
 /.next/
 /out/
@@ -34,3 +37,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE Settings
+settings.json
+
+# env
+.env
