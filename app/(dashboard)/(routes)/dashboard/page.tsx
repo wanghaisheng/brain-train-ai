@@ -58,7 +58,7 @@ export default function DashboardPage() {
             Welcome to ZenMelody
           </h3>
           <p className="text-muted-foreground ">
-            ZenMelody is more than just an app; it's a companion for anyone
+            ZenMelody is more than just an app, it&apos;s a companion for anyone
             looking to enrich their meditation practice and discover inner
             peace. With AI-generated guide, AI-generated music, inspirational Zen quotes, and a
             diverse range of meditation videos, ZenMelody is your all-in-one

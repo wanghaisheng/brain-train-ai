@@ -28,12 +28,6 @@ export default function ZenGuide() {
     },
   });
 
-  const sampleText = `Create a meditation guide for deep relaxation           your companion towards deeper peace and mindfulness. Enter your prompt
-  for generating personalized meditation guide. For example, "Create a
-  meditation guide for deep relaxation" and click on Generate.           your companion towards deeper peace and mindfulness. Enter your prompt
-  for generating personalized meditation guide. For example, "Create a
-  meditation guide for deep relaxation" and click on Generate.`;
-
   const isLoading = form.formState.isSubmitting;
 
   const onsubmit = async (values: z.infer<typeof formSchema>) => {
@@ -72,8 +66,8 @@ export default function ZenGuide() {
           <br /> <br /> Let{" "}
           <span className="text-indigo-400 font-semibold">Zen Guide AI</span> be
           your companion towards deeper peace and mindfulness. Enter your prompt
-          for generating personalized meditation guide. For example, "Create a
-          meditation guide for deep relaxation" and click on Generate.
+          for generating personalized meditation guide. For example, &quot;Create a
+          meditation guide for deep relaxation&quot; and click on Generate.
         </p>
       </div>
       <div className="px-4 lg:px-8">
