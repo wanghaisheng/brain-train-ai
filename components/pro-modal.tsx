@@ -52,6 +52,16 @@ export default function ProModal() {
             Unlock Pro
             <Zap className="h-5 w-5 ml-1" />
           </Button>
+          <div
+            className=" mt-6 bg-indigo-100 border-l-4 border-indigo-500 text-blue-500 p-4"
+            role="alert"
+          >
+            <p className="font-bold">Coming Soon!</p>
+            <p>
+              The Pro version is currently under development. Stay tuned for
+              updates!
+            </p>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
