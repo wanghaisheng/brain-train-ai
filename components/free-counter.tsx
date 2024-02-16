@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { MAX_FREE_COUNTS } from "@/constants";
+import { MAX_FREE_COUNTS } from "@/lib/constants";
 import { Progress } from "@/components/ui/progress";
 import { getApiLimitCount } from "@/lib/api-limits";
 import { Zap } from "lucide-react";
