@@ -15,7 +15,6 @@ export default function LandingHero() {
   return (
     <div
       className="bg-cover bg-center text-slate-700 py-12 px-4"
-      style={{ backgroundImage: "url('/path-to-your-background-image.jpg')" }}
     >
       <h1 className="mt-14 text-3xl font-extrabold tracking-tight text-center text-zync-600 sm:text-4xl md:text-5xl">
         Embrace Your Inner Peace with ZenMelody
